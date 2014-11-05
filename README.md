@@ -1,4 +1,4 @@
 Image-Processing-Package
 ========================
 
-Moved to Bitbucket ..
+My 3rd semester image processing package that was a part of Algorithms Analysis and Design project 
