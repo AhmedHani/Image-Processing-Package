@@ -10,24 +10,29 @@ using System.Windows.Forms;
 
 namespace Image_Processing
 {
-    public partial class ContrastForm : Form
+    public partial class BitSlicing : Form
     {
-        public double Value
-        {
-            get { return (Convert.ToDouble(ContrastTextBox.Text)); }
-            set { ContrastTextBox.Text = value.ToString(); }
-        }
-
-        public ContrastForm()
+        public BitSlicing()
         {
             InitializeComponent();
             OK.DialogResult = DialogResult.OK;
             Cancel.DialogResult = DialogResult.Cancel;
         }
 
-        private void ContrastForm_Load(object sender, EventArgs e)
+        public byte MaskValue
         {
+            get
+            {
+                byte x = Convert.ToByte(maskBox.Text, 2);
+                //byte temp = Convert.ToByte(x);
+                return (x); }
+            set { maskBox.Text = value.ToString(); }
+        }
 
+        public bool GrayScale
+        {
+            get { return (this.grayCheck.Checked); }
+            set { this.grayCheck.Checked = value; }
         }
 
         private void OK_Click(object sender, EventArgs e)

@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace Image_Processing
 {
-    public partial class ContrastForm : Form
+    public partial class AddForm : Form
     {
-        public double Value
-        {
-            get { return (Convert.ToDouble(ContrastTextBox.Text)); }
-            set { ContrastTextBox.Text = value.ToString(); }
-        }
-
-        public ContrastForm()
+        public AddForm()
         {
             InitializeComponent();
             OK.DialogResult = DialogResult.OK;
             Cancel.DialogResult = DialogResult.Cancel;
         }
 
-        private void ContrastForm_Load(object sender, EventArgs e)
+        public double FractionValue
         {
-
+            get { return (Convert.ToDouble(fractionBox.Text)); }
+            set { fractionBox.Text = value.ToString(); }
         }
 
         private void OK_Click(object sender, EventArgs e)

@@ -10,33 +10,25 @@ using System.Windows.Forms;
 
 namespace Image_Processing
 {
-    public partial class PopWindow : Form
+    public partial class ScaleForm : Form
     {
-        public int Value
-        {
-            get { return (Convert.ToInt32(BrightnessBox.Text, 10)); }
-            set { BrightnessValue.Text = value.ToString(); }
-        }
-        public PopWindow()
+        public ScaleForm()
         {
             InitializeComponent();
             OK.DialogResult = DialogResult.OK;
             Cancel.DialogResult = DialogResult.Cancel;
         }
 
-        private void BrightnessBox_TextChanged(object sender, EventArgs e)
+        public double ScaleXValue
         {
-
+            get { return (Convert.ToDouble(scaleXText.Text)); }
+            set { scaleXText.Text = value.ToString(); }
         }
 
-        private void PopWindow_Load(object sender, EventArgs e)
+        public double ScaleYValue
         {
-
-        }
-
-        private void BrightnessValue_Click(object sender, EventArgs e)
-        {
-
+            get { return (Convert.ToDouble(scaleYText.Text)); }
+            set { scaleYText.Text = value.ToString(); }
         }
 
         private void OK_Click(object sender, EventArgs e)

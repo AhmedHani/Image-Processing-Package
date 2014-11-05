@@ -1,6 +1,6 @@
 ﻿namespace Image_Processing
 {
-    partial class ContrastForm
+    partial class SaltAndPepperForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,58 +29,57 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.ContrastTextBox = new System.Windows.Forms.TextBox();
-            this.Cancel = new System.Windows.Forms.Button();
+            this.sizeBox = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 24);
+            this.label1.Location = new System.Drawing.Point(13, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Value";
+            this.label1.Text = "Size";
             // 
-            // ContrastTextBox
+            // sizeBox
             // 
-            this.ContrastTextBox.Location = new System.Drawing.Point(78, 21);
-            this.ContrastTextBox.Name = "ContrastTextBox";
-            this.ContrastTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ContrastTextBox.TabIndex = 1;
-            // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(139, 48);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(75, 23);
-            this.Cancel.TabIndex = 2;
-            this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = true;
+            this.sizeBox.Location = new System.Drawing.Point(56, 19);
+            this.sizeBox.Name = "sizeBox";
+            this.sizeBox.Size = new System.Drawing.Size(135, 20);
+            this.sizeBox.TabIndex = 1;
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(16, 47);
+            this.OK.Location = new System.Drawing.Point(13, 56);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
-            this.OK.TabIndex = 3;
+            this.OK.TabIndex = 2;
             this.OK.Text = "OK";
             this.OK.UseVisualStyleBackColor = true;
-            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
-            // ContrastForm
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(116, 56);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 3;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            // 
+            // SaltAndPepperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 83);
-            this.Controls.Add(this.OK);
+            this.ClientSize = new System.Drawing.Size(203, 91);
             this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.ContrastTextBox);
+            this.Controls.Add(this.OK);
+            this.Controls.Add(this.sizeBox);
             this.Controls.Add(this.label1);
-            this.Name = "ContrastForm";
-            this.Text = "ContrastForm";
-            this.Load += new System.EventHandler(this.ContrastForm_Load);
+            this.Name = "SaltAndPepperForm";
+            this.Text = "SaltAndPepperForm";
+            this.Load += new System.EventHandler(this.SaltAndPepperForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,8 +88,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ContrastTextBox;
-        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.TextBox sizeBox;
         private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.Button Cancel;
     }
 }

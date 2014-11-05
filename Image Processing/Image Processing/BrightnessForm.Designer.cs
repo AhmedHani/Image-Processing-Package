@@ -1,6 +1,6 @@
 ﻿namespace Image_Processing
 {
-    partial class PopWindow
+    partial class BrightnessForm
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
-            // PopWindow
+            // BrightnessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,8 +80,8 @@
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.BrightnessBox);
             this.Controls.Add(this.BrightnessValue);
-            this.Name = "PopWindow";
-            this.Text = "PopWindow";
+            this.Name = "BrightnessForm";
+            this.Text = "Brightness Form";
             this.Load += new System.EventHandler(this.PopWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

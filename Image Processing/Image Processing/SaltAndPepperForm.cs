@@ -10,27 +10,22 @@ using System.Windows.Forms;
 
 namespace Image_Processing
 {
-    public partial class ContrastForm : Form
+    public partial class SaltAndPepperForm : Form
     {
-        public double Value
-        {
-            get { return (Convert.ToDouble(ContrastTextBox.Text)); }
-            set { ContrastTextBox.Text = value.ToString(); }
-        }
-
-        public ContrastForm()
+        public SaltAndPepperForm()
         {
             InitializeComponent();
             OK.DialogResult = DialogResult.OK;
             Cancel.DialogResult = DialogResult.Cancel;
         }
 
-        private void ContrastForm_Load(object sender, EventArgs e)
+        public int Size
         {
-
+            get { return (Convert.ToInt32(sizeBox.Text)); }
+            set { sizeBox.Text = value.ToString(); }
         }
 
-        private void OK_Click(object sender, EventArgs e)
+        private void SaltAndPepperForm_Load(object sender, EventArgs e)
         {
 
         }

@@ -10,22 +10,31 @@ using System.Windows.Forms;
 
 namespace Image_Processing
 {
-    public partial class ContrastForm : Form
+    public partial class BrightnessForm : Form
     {
-        public double Value
+        public int Value
         {
-            get { return (Convert.ToDouble(ContrastTextBox.Text)); }
-            set { ContrastTextBox.Text = value.ToString(); }
+            get { return (Convert.ToInt32(BrightnessBox.Text, 10)); }
+            set { BrightnessValue.Text = value.ToString(); }
         }
-
-        public ContrastForm()
+        public BrightnessForm()
         {
             InitializeComponent();
             OK.DialogResult = DialogResult.OK;
             Cancel.DialogResult = DialogResult.Cancel;
         }
 
-        private void ContrastForm_Load(object sender, EventArgs e)
+        private void BrightnessBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PopWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BrightnessValue_Click(object sender, EventArgs e)
         {
 
         }

@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,62 +46,136 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BitSlicing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BitSlicing.Designer.cs">
+      <DependentUpon>BitSlicing.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContrastForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ContrastForm.Designer.cs">
       <DependentUpon>ContrastForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit.cs" />
     <Compile Include="GammaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GammaForm.Designer.cs">
       <DependentUpon>GammaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageOperations.cs" />
+    <Compile Include="Histogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histogram.Designer.cs">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image Operations\GeometricOperationsMatrices.cs" />
+    <Compile Include="Image Operations\GeometricOperationsNaive.cs" />
+    <Compile Include="Image Operations\Image Segmentation.cs" />
+    <Compile Include="Image Operations\ImageAlgebra.cs" />
+    <Compile Include="Image Operations\NeighborOperations.cs" />
+    <Compile Include="Image Operations\NoiseGeneration.cs" />
+    <Compile Include="Image Operations\NoiseReduction.cs" />
+    <Compile Include="Image Operations\PixelOperations.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhotosAlgebra.cs">
+    <Compile Include="MedianFilterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhotosAlgebra.Designer.cs">
-      <DependentUpon>PhotosAlgebra.cs</DependentUpon>
+    <Compile Include="MedianFilterForm.Designer.cs">
+      <DependentUpon>MedianFilterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopWindow.cs">
+    <Compile Include="Netpbm format\PPM%28P3%29\ASCIIReader.cs" />
+    <Compile Include="Netpbm format\PPM%28P3%29\ReadPPM3.cs" />
+    <Compile Include="Netpbm format\PPM%28P3%29\WritePPM3.cs" />
+    <Compile Include="Netpbm format\PPM%28P6%29\BinaryParser.cs" />
+    <Compile Include="Netpbm format\PPM%28P6%29\ReadPPM6.cs" />
+    <Compile Include="Netpbm format\PPM.cs" />
+    <Compile Include="BrightnessForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopWindow.Designer.cs">
-      <DependentUpon>PopWindow.cs</DependentUpon>
+    <Compile Include="BrightnessForm.Designer.cs">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadPPM.cs" />
     <Compile Include="Resize.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Resize.Designer.cs">
       <DependentUpon>Resize.cs</DependentUpon>
     </Compile>
-    <Compile Include="WritePPM.cs" />
+    <Compile Include="Netpbm format\PPM%28P6%29\WritePPM6.cs" />
+    <Compile Include="RotationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RotationForm.Designer.cs">
+      <DependentUpon>RotationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RSS.Designer.cs">
+      <DependentUpon>RSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaltAndPepperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaltAndPepperForm.Designer.cs">
+      <DependentUpon>SaltAndPepperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScaleForm.Designer.cs">
+      <DependentUpon>ScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShearForm.Designer.cs">
+      <DependentUpon>ShearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TintForm.Designer.cs">
+      <DependentUpon>TintForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BitSlicing.resx">
+      <DependentUpon>BitSlicing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContrastForm.resx">
       <DependentUpon>ContrastForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GammaForm.resx">
       <DependentUpon>GammaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Histogram.resx">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhotosAlgebra.resx">
-      <DependentUpon>PhotosAlgebra.cs</DependentUpon>
+    <EmbeddedResource Include="MedianFilterForm.resx">
+      <DependentUpon>MedianFilterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopWindow.resx">
-      <DependentUpon>PopWindow.cs</DependentUpon>
+    <EmbeddedResource Include="BrightnessForm.resx">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,6 +188,24 @@
     </Compile>
     <EmbeddedResource Include="Resize.resx">
       <DependentUpon>Resize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RotationForm.resx">
+      <DependentUpon>RotationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSS.resx">
+      <DependentUpon>RSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaltAndPepperForm.resx">
+      <DependentUpon>SaltAndPepperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaleForm.resx">
+      <DependentUpon>ScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShearForm.resx">
+      <DependentUpon>ShearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TintForm.resx">
+      <DependentUpon>TintForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -126,6 +220,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,27 +10,33 @@ using System.Windows.Forms;
 
 namespace Image_Processing
 {
-    public partial class ContrastForm : Form
+    public partial class ShearForm : Form
     {
-        public double Value
-        {
-            get { return (Convert.ToDouble(ContrastTextBox.Text)); }
-            set { ContrastTextBox.Text = value.ToString(); }
-        }
-
-        public ContrastForm()
+        public ShearForm()
         {
             InitializeComponent();
             OK.DialogResult = DialogResult.OK;
             Cancel.DialogResult = DialogResult.Cancel;
         }
 
-        private void ContrastForm_Load(object sender, EventArgs e)
+        public double ShearXValue
+        {
+            get { return (Convert.ToDouble(ShearX.Text)); }
+            set { ShearX.Text = value.ToString(); }
+        }
+
+        public double ShearYValue
+        {
+            get { return (Convert.ToDouble(ShearY.Text)); }
+            set { ShearY.Text = value.ToString(); }
+        }
+
+        private void OK_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void OK_Click(object sender, EventArgs e)
+        private void ShearForm_Load(object sender, EventArgs e)
         {
 
         }
